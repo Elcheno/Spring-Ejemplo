@@ -5,13 +5,16 @@ import lombok.Data;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
+import java.io.Serializable;
+
 @Data //lombok
 @Entity //marca que es una entidad
 @Table(name="products") //indica que es una tabla y su nombre
-public class Producto {
+public class Producto implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @JdbcTypeCode(SqlTypes.INTEGER)
     public int id;
 
     @Column(name="name", nullable=false)
@@ -19,6 +22,11 @@ public class Producto {
     public String nombre;
 
     @Column(name="price")
+    @JdbcTypeCode(SqlTypes.FLOAT)
     public double precio;
+
+    @ManyToOne
+    @JoinColumn(name = "carrito_compra_id")
+    private CarritoCompra carritoCompra;
 
 }
