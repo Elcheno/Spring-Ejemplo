@@ -1,12 +1,24 @@
 package com.ruben.prueba.controller;
 
+import com.ruben.prueba.model.Producto;
+import com.ruben.prueba.services.ServicesProducts;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
+import java.util.Optional;
+
 @Controller
 public class prueba {
+
+    private ServicesProducts productServices;
+
+    // CONSTRUCTOR
+    public prueba(ServicesProducts productServices){
+        this.productServices = productServices;
+    }
 
     @GetMapping("/prueba")
     public String p(Model model){
@@ -30,6 +42,15 @@ public class prueba {
         model.addAttribute("id", id);
         model.addAttribute("cod", cod);
         return "prueba2";
+    }
+
+    @GetMapping("/producto/{id}")
+    public String home(@PathVariable int id, Model model) {
+        Producto p = productServices.findById(id);
+        model.addAttribute("productId", p.getId());
+        model.addAttribute("productName", p.getNombre());
+        model.addAttribute("productPrice", p.getPrecio());
+        return "producto";
     }
 
 }

@@ -25,8 +25,4 @@ public class Producto implements Serializable {
     @JdbcTypeCode(SqlTypes.FLOAT)
     public double precio;
 
-    @ManyToOne
-    @JoinColumn(name = "carrito_compra_id")
-    private CarritoCompra carritoCompra;
-
 }
