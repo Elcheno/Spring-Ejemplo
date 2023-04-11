@@ -1,0 +1,32 @@
+.bg-text{
+    background-color: darkgrey;
+    color: darkgoldenrod;
+}
+
+.css-table{
+    border:1px solid black;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.css-table-head{
+    background-color: dimgrey;
+    color:goldenrod;
+}
+
+.btn-buy{
+    background-color: darkgreen;
+    color: white;
+    border-radius: 15px;
+}
+
+.td-btn-buy{
+    width: 50px;
+    background-color: dimgrey;
+}
+
+.btn_min_table{
+    width: 100%;
+    background-color: dimgrey;
+}

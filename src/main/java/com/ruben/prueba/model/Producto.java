@@ -17,11 +17,11 @@ public class Producto implements Serializable {
     @JdbcTypeCode(SqlTypes.INTEGER)
     public int id;
 
-    @Column(name="name", nullable=false)
+    @Column(name="nombre", nullable=false)
     @JdbcTypeCode(SqlTypes.CHAR)
     public String nombre;
 
-    @Column(name="price")
+    @Column(name="precio")
     @JdbcTypeCode(SqlTypes.FLOAT)
     public double precio;
 
