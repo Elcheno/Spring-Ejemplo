@@ -11,16 +11,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 @Controller
-public class prueba {
+public class controllerProduct {
 
     private ServicesProducts productServices;
 
     // CONSTRUCTOR
-    public prueba(ServicesProducts productServices){
+    public controllerProduct(ServicesProducts productServices){
         this.productServices = productServices;
     }
 
