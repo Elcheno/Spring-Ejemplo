@@ -24,4 +24,6 @@ public class ServicesProducts implements InterfacesProducts{
     public Producto findById(int id) {
         return productRepository.findById(id);
     }
+
+    public void save(Producto product){productRepository.save(product);}
 }

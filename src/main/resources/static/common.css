@@ -51,9 +51,16 @@ tr{
     background-color: dimgrey;
 }
 
-.btn_min_table{
+.btn_nav{
     background-color: dimgrey;
     height: 80%;
     width: 60px;
+    color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 

@@ -18,7 +18,8 @@
             <h1>Lista de Productos</h1>
         </div>
         <div class="nav">
-            <button class="btn_min_table" onclick="closeTable()">_</button>
+            <a th:href="@{/productos/registro}" class="btn_nav">+</a>
+            <a class="btn_nav" onclick="closeTable()">_</a>
         </div>
     </div>
 
@@ -33,7 +34,7 @@
             <tr th:each="producto,iter: ${productos}">
                 <td th:text="${producto.id}"></td>
                 <td th:text="${producto.nombre}"></td>
-                <td th:text="${producto.precio}" €></td>
+                <td th:text="${producto.precio} + ' €'"></td>
                 <td class="td-btn-buy"><button class="btn-buy">COMPRAR</button></td>
             </tr>
         </table>
