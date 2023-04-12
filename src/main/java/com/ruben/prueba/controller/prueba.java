@@ -61,7 +61,7 @@ public class prueba {
     public String productList(Model model){
         List<Producto> productos = productServices.getAllProduct();
         model.addAttribute("productos", productos);
-        return "productosList";
+        return "productosList"; // implementacion de stylo mediante css y bootstrap
     }
 
 }

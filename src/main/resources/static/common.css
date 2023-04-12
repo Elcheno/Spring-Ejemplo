@@ -1,3 +1,27 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+.cont1{
+    margin-top: 20px;
+}
+
+tr{
+    height: 35px;
+}
+
 .bg-text{
     background-color: darkgrey;
     color: darkgoldenrod;
@@ -13,6 +37,7 @@
 .css-table-head{
     background-color: dimgrey;
     color:goldenrod;
+    height: 2rem;
 }
 
 .btn-buy{
@@ -22,11 +47,13 @@
 }
 
 .td-btn-buy{
-    width: 50px;
+    width: 100px;
     background-color: dimgrey;
 }
 
 .btn_min_table{
-    width: 100%;
     background-color: dimgrey;
+    height: 80%;
+    width: 60px;
 }
+

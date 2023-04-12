@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:table="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>ProductosList</title>
     <link rel="stylesheet" href="/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
 </head>
-<body>
-  <h1 class="bg-text">Lista de Productos</h1>
-  <div class="bg-text">
-    <table class="css-table">
-        <tr class="css-table-head">
-            <td>ID</td>
-            <td>NOMBRE</td>
-            <td>PRECIO</td>
-            <td><button class="btn_min_table">_</button></td>
-        </tr>
-        <tr th:each="producto,iter: ${productos}">
-            <td th:text="${producto.id}"></td>
-            <td th:text="${producto.nombre}"></td>
-            <td th:text="${producto.precio}"></td>
-            <td class="td-btn-buy"><button class="btn-buy">COMPRAR</button></td>
-        </tr>
-    </table>
-  </div>
+<body class="bg-dark">
 
+<div class="wrapper">
 
+    <div class="header bg-text">
+        <div class="title">
+            <h1>Lista de Productos</h1>
+        </div>
+        <div class="nav">
+            <button class="btn_min_table" onclick="closeTable()">_</button>
+        </div>
+    </div>
+
+    <div class="cont1 bg-text" id="tableSelector" style="display: block">
+        <table class="css-table">
+            <tr class="css-table-head">
+                <td>ID</td>
+                <td>NOMBRE</td>
+                <td>PRECIO</td>
+                <td>CARRITO</td>
+            </tr>
+            <tr th:each="producto,iter: ${productos}">
+                <td th:text="${producto.id}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.precio}" €></td>
+                <td class="td-btn-buy"><button class="btn-buy">COMPRAR</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="/common.js"></script>
 </body>
 </html>
