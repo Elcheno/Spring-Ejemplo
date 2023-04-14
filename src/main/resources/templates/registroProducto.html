@@ -30,10 +30,6 @@
         <div class="row">
             <form th:action="@{/productos/registro}" th:object="${product}" method="post">
                 <div class="container d-flex flex-row justify-content-around">
-                    <div class="fieldTextId d-flex flex-column text-center m-0">
-                        <p>ID</p>
-                        <input type="text" name="id" th:field="*{id}" placeholder="Introduce el id"/>
-                    </div>
                     <div class="fieldTextName d-flex flex-column text-center m-0">
                         <p>NOMBRE</p>
                         <input type="text" name="id" th:field="*{nombre}" placeholder="Introduce el Nombre"/>
